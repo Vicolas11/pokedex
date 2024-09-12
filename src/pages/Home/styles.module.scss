@@ -1,7 +1,7 @@
 .container {
-  @apply w-[80%] mx-auto;
+  @apply md:w-[90%] lg:w-[80%] mx-auto;
 
   .logo {
-    @apply w-64 mt-5 mx-auto;
+    @apply w-52 md:w-64 mt-20 md:mt-5 mx-auto;
   }
 }

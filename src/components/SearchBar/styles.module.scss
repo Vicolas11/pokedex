@@ -2,7 +2,8 @@
   @apply flex justify-between mt-10 gap-x-3;
 
   input {
-    @apply w-full text-gray-800 h-14 px-3 py-4 rounded-[8px];
+    @apply w-full text-gray-800 h-14 px-3 py-4 rounded-[8px] border;
+    @apply focus:outline-[#FF5350] transition-all duration-200 hover:border-gray-400;
     box-shadow: 1px 2px 12px rgba($color: #000000, $alpha: 0.3);
   }
 

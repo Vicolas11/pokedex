@@ -1,5 +1,5 @@
 .container {
-  @apply flex w-[80%] mx-auto gap-x-12 relative;
+  @apply flex flex-col lg:flex-row w-full md:w-[90%] lg:w-full xl:w-[80%] mx-auto gap-x-12 relative;
 
   .circleVersusImg {
     @apply absolute w-44 translate-y-[-50%] top-1/2 translate-x-[-50%] left-1/2;

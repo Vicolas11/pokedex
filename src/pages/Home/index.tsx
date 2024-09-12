@@ -39,17 +39,7 @@ export default function Home() {
   return (
     <>
       <Header />
-
       <div className={styles.container}>
-        {/* The three Gray Circle on the backgroud */}
-        {/* {Array.from({ length: 3 }).map((_, idx) => (
-        <img
-          key={idx}
-          className={styles[`greyCircleBgImg_${idx + 1}`]}
-          src={GreyCircleBgImg}
-          alt={`Circle Background Image ${idx + 1}`}
-        />
-      ))} */}
         <img className={styles.logo} src={Logo} alt="Pokemon Logo" />
         <SearchBar />
         <PokemonList pokemonData={data} />

@@ -6,11 +6,11 @@
     @apply text-center;
 
     .pokemonComparisonImg {
-      @apply h-40 ml-5;
+      @apply h-40 lg:ml-5;
     }
   }
 
   .detailInfoContainer {
-    @apply w-[90%] mx-auto;
+    @apply w-full md:w-[90%] mx-auto;
   }
 }

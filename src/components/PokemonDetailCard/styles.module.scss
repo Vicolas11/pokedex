@@ -1,12 +1,13 @@
 .pokemonDetailCard {
-  @apply flex justify-between items-center px-4 py-8 mt-8 gap-x-4 rounded-[15px] bg-white;
+  @apply flex flex-col md:flex-row justify-between items-center px-4 py-8 mt-8;
+  @apply gap-y-4 lg:gap-y-0 gap-x-0 lg:gap-x-4 rounded-[15px] bg-white;
   box-shadow: 1px 2px 20px rgba($color: #000000, $alpha: 0.4);
 
   .pokemonDetailImgContainer {
-    @apply flex-1 mx-auto w-full px-6;
+    @apply flex-1 mx-auto lg:w-full px-6;
 
     .pokemonDetailImg {
-      @apply h-80 ml-5;
+      @apply h-52 lg:h-80 ml-5;
     }
   }
 }

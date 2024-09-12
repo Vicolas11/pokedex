@@ -2,7 +2,7 @@
   @apply flex justify-between items-center mt-10;
 
   .logo {
-    @apply w-36 cursor-pointer;
+    @apply w-32 md:w-36 cursor-pointer;
 
     img {
       @apply w-full h-full;
@@ -10,6 +10,6 @@
   }
 
   .menu {
-    @apply cursor-pointer text-lg;
+    @apply cursor-pointer text-2xl md:text-lg;
   }
 }

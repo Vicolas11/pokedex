@@ -3,21 +3,31 @@
 @tailwind utilities;
 
 html {
-  @apply relative bg-bgColor;
+  @apply relative bg-bgColor overflow-x-hidden;
 
-  .greyCircleBgImg_1 {
-    @apply absolute w-52 md:w-80 translate-x-[-8%] translate-y-[-10%];
+  img[alt="CircleBgImg"] {
+    @apply absolute w-48 md:w-80 -z-10 opacity-95;
   }
 
-  .greyCircleBgImg_2 {
-    @apply block absolute w-52 md:w-80 translate-x-1/2 translate-y-[-55%];
+  #greyCircleBgImg1 {
+    @apply left-[-25%] top-[-3%];
+    @apply md:left-[-15%] md:top-[-10%];
+    @apply lg:left-[-5.5%] lg:top-[-5%];
   }
 
-  .greyCircleBgImg_3 {
-    @apply absolute w-52 md:w-80 translate-x-[100%] translate-y-[50%];
+  #greyCircleBgImg2 {
+    @apply top-[-10%] right-[10%];
+    @apply md:top-[-25%] md:right-[-5%];
+    @apply lg:top-[-25.5%] lg:right-[20%];
+  }
+
+  #greyCircleBgImg3 {
+    @apply top-[20%] right-[-30%];
+    @apply md:top-[20%] md:right-[-15%];
+    @apply lg:top-[20%] lg:right-[-10%];
   }
 
   body {
-    @apply max-w-[1280px] w-[90%] mx-auto;
+    @apply max-w-[1280px] w-[90%] mx-auto overflow-x-hidden;
   }
 }
