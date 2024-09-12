@@ -1,0 +1,15 @@
+.container {
+  @apply md:w-[90%] lg:w-[80%] mx-auto;
+
+  .hasErrorText {
+    @apply font-bold text-lg text-center text-red-600 my-5;
+  }
+
+  .notFoundText {
+    @apply font-bold text-lg text-center text-gray-800 my-5;
+  }
+
+  .logo {
+    @apply w-52 md:w-64 mt-20 md:mt-5 mx-auto;
+  }
+}

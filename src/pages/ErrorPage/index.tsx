@@ -24,7 +24,7 @@ export default function ErrorPage() {
         </p>
         <div className={styles.btnContainer}>
           <button onClick={() => navigate("/", { replace: true })}>
-            Go Home
+            Go Back
           </button>
         </div>
       </div>

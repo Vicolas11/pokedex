@@ -11,6 +11,11 @@ export default {
         txtColor: "#072635",
         txtColor2: "#707070",
       },
+      backgroundImage: {
+        custom_lg: "url('/bg_lg.png')",
+        custom_sm: "url('/bg_sm.png')",
+        custom_xs: "url('/bg_xs.png')"
+      }
     },
   },
   plugins: [],

@@ -1,6 +1,8 @@
-export interface PokemonCardProps {
+export interface PokemonListCardProps {
+  id: string;
   name: string;
-  number: number;
-  description: string;
+  number: string;
   imageUrl: string;
+  classification: string;
+  types: string[];
 }

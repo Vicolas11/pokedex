@@ -1,7 +1,7 @@
 import { PokemonDetailInfoProps } from "../../interfaces/PokemonDetailInfo.interface";
 import { IoVolumeHighOutline } from "react-icons/io5";
-import CardBtn from "../CardBtn";
 import styles from "./styles.module.scss";
+import { CardBtn } from "../CardBtn";
 
 const statsData = [
   { title: "HP", number: 47 },
@@ -16,6 +16,9 @@ export default function PokemonDetailInfo({
   pokemonName,
   pokemonNumber,
   isDetailPage,
+  weight,
+  height,
+  types,
 }: PokemonDetailInfoProps) {
   return (
     <div className={styles.pokemonDetailInfo}>
@@ -26,12 +29,14 @@ export default function PokemonDetailInfo({
       </div>
 
       <div className={styles.btnWrapper}>
-        <CardBtn title="Grass" disabled={isDetailPage} />
-        <CardBtn
-          title="Position"
-          xtraStyle={styles.btnPosition}
-          disabled={isDetailPage}
-        />
+        {types.map((type, idx) => (
+          <CardBtn
+            key={idx}
+            title={type}
+            xtraStyle={idx === 1 ? styles.btnPosition : ""}
+            disabled={isDetailPage}
+          />
+        ))}
       </div>
 
       <p className={styles.pokemonDetailDesc}>
@@ -42,11 +47,11 @@ export default function PokemonDetailInfo({
       <div className={styles.heightWeight}>
         <div className={styles.height}>
           <h3>Height</h3>
-          <p>0.7m</p>
+          <p>{height.maximum}</p>
         </div>
         <div className={styles.weight}>
           <h3>Weight</h3>
-          <p>0.7m</p>
+          <p>{weight.maximum}</p>
         </div>
       </div>
 

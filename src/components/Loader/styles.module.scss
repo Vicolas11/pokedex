@@ -1,0 +1,7 @@
+.loader {
+  @apply flex flex-col justify-center items-center py-5 gap-y-5;
+
+  h2 {
+    @apply font-bold text-base text-center;
+  }
+}

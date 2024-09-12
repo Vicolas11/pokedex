@@ -1,10 +1,11 @@
 import { CardBtnProps } from "../../interfaces/CartBtn.interface";
 import styles from "./styles.module.scss";
+import { FC } from "react";
 
-export default function CardBtn({ title, xtraStyle, ...rest }: CardBtnProps) {
+export const CardBtn: FC<CardBtnProps> = ({ title, xtraStyle, ...rest }) => {
   return (
     <button className={`${styles.button} ${xtraStyle}`} {...rest}>
       {title}
     </button>
   );
-}
+};

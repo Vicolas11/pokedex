@@ -1,28 +1,20 @@
-import React from "react";
+import { PokemonListProps } from "../../interfaces/PokemonListProp.interface";
+import { PokemonListCard } from "../PokemonListCard";
 import styles from "./style.module.scss";
-import { PokemonCard } from "../PokemonCard";
-
-interface Pokemon {
-  name: string;
-  description: string;
-  imageUrl: string;
-  number: number;
-}
-
-interface PokemonListProps {
-  pokemonData: Pokemon[];
-}
+import React from "react";
 
 export const PokemonList: React.FC<PokemonListProps> = ({ pokemonData }) => {
   return (
     <div className={styles.pokemonList}>
       {pokemonData.map((pokemon, idx) => (
-        <PokemonCard
+        <PokemonListCard
           key={idx}
+          id={pokemon.id}
           number={pokemon.number}
+          types={pokemon.types}
           name={pokemon.name}
-          description={pokemon.description}
-          imageUrl={pokemon.imageUrl}
+          classification={pokemon.classification}
+          imageUrl={pokemon.image}
         />
       ))}
     </div>

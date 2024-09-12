@@ -1,7 +1,7 @@
-export interface PokemonDetailInfoProps {
-  pokemonNumber: string;
-  pokemonName: string;
-  isDetailPage?: boolean;
+export interface PokemonDetailCardProps {
+  name: string;
+  number: string;
+  imageUrl: string;
   weight: {
     minimum: string;
     maximum: string;
