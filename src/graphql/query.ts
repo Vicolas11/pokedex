@@ -23,3 +23,30 @@ query Pokemons($first: Int!){
   }
 }
 `;
+
+// Fetch Single Pokemon
+export const fetchSinglePokemon = `#graphql
+query Pokemon($id: String, $name: String){
+  pokemon(id: $id, name: $name){
+    id
+    number
+    name
+    weight{
+      minimum
+      maximum
+    }
+    height{
+      minimum
+      maximum
+    }
+    classification
+    types
+    resistant
+    weaknesses
+    fleeRate
+    maxCP
+    maxHP
+    image
+  }
+}
+`;

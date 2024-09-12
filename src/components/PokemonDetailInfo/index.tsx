@@ -1,25 +1,17 @@
 import { PokemonDetailInfoProps } from "../../interfaces/PokemonDetailInfo.interface";
 import { IoVolumeHighOutline } from "react-icons/io5";
+import { statsData } from "../../data/local.data";
 import styles from "./styles.module.scss";
-import { CardBtn } from "../CardBtn";
+import { CardButton } from "../CardButton";
 
-const statsData = [
-  { title: "HP", number: 47 },
-  { title: "ATK", number: 47 },
-  { title: "DEF", number: 47 },
-  { title: "SpA", number: 47 },
-  { title: "SpD", number: 47 },
-  { title: "SPD", number: 47 },
-];
-
-export default function PokemonDetailInfo({
+export const PokemonDetailInfo = ({
   pokemonName,
   pokemonNumber,
   isDetailPage,
   weight,
   height,
   types,
-}: PokemonDetailInfoProps) {
+}: PokemonDetailInfoProps) => {
   return (
     <div className={styles.pokemonDetailInfo}>
       <p className={styles.pokemonDetailNum}>#{pokemonNumber}</p>
@@ -30,7 +22,7 @@ export default function PokemonDetailInfo({
 
       <div className={styles.btnWrapper}>
         {types.map((type, idx) => (
-          <CardBtn
+          <CardButton
             key={idx}
             title={type}
             xtraStyle={idx === 1 ? styles.btnPosition : ""}
@@ -60,7 +52,7 @@ export default function PokemonDetailInfo({
         {statsData.map((stat, idx) => (
           <div key={idx} className={styles.statsData}>
             <h3>{stat.title}</h3>
-            <p>{stat.number}</p>
+            <p>{Math.floor(Math.random() * 90) + 10}</p>
           </div>
         ))}
       </div>
@@ -72,4 +64,4 @@ export default function PokemonDetailInfo({
       </div>
     </div>
   );
-}
+};

@@ -9,6 +9,20 @@
     @apply font-bold text-lg text-center text-gray-800 my-5;
   }
 
+  .searchResult {
+    @apply flex items-center mt-4 gap-x-4 text-gray-600;
+
+    span {
+      @apply cursor-pointer transition-all duration-200;
+    }
+
+    span:hover {
+      svg {
+        @apply translate-x-0.5;
+      }
+    }
+  };
+
   .logo {
     @apply w-52 md:w-64 mt-20 md:mt-5 mx-auto;
   }

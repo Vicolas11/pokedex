@@ -9,8 +9,14 @@
 
   button {
     @apply bg-[#FF5350] text-white w-14  rounded-[8px] text-3xl;
-    @apply flex justify-center items-center;
-    @apply hover:opacity-90;
+    @apply flex justify-center items-center disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply hover:opacity-90 disabled:hover:opacity-50;
+  }
+
+  button:hover:disabled {
+    svg {
+      @apply rotate-0;
+    }
   }
 
   button:hover {

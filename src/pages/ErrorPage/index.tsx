@@ -2,7 +2,7 @@ import { useRouteError, ErrorResponse, useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss";
 import { useEffect } from "react";
 
-export default function ErrorPage() {
+export const ErrorPage = () => {
   const { status, statusText, data } = useRouteError() as ErrorResponse;
   const navigate = useNavigate();
 
@@ -30,4 +30,4 @@ export default function ErrorPage() {
       </div>
     </div>
   );
-}
+};

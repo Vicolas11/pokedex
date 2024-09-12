@@ -1,4 +1,5 @@
+import { IPokemonData } from "./PokemonData.interface";
+
 export interface PokemonComparisonCardProps {
-  pokemonNumber: string;
-  pokemonName: string;
+  pokemon: IPokemonData;
 }

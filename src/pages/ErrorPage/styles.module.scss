@@ -1,5 +1,5 @@
 .container {
-  @apply flex justify-center items-center w-full h-screen bg-bgColor;
+  @apply flex justify-center items-center w-full h-screen;
 
   .content {
     @apply text-center text-lg;
@@ -16,8 +16,8 @@
       @apply flex justify-center;
 
       button {
-        @apply text-txtColor py-1 px-4 rounded-[12px] bg-activeStateColor;
-        @apply hover:bg-activeStateColor/50;
+        @apply text-white py-1 px-4 rounded-[12px] bg-amber-600;
+        @apply hover:bg-amber-700/50;
       }
     }
   }

@@ -1,23 +1,25 @@
-import { useSearchParams } from "react-router-dom";
-import { useAppSelector } from "../../hooks/store.hook";
-import { Header } from "../../components/Header";
-import { FiArrowRight } from "react-icons/fi";
-import styles from "./styles.module.scss";
-import { PokemonImg } from "../../assets";
 import { PokemonDetailCard } from "../../components/PokemonDetailCard";
+import { EvolutionPokemon } from "../../components/EvolutionPokemon";
+import { useAppSelector } from "../../hooks/store.hook";
+import { useSearchParams } from "react-router-dom";
+import { Header } from "../../components/Header";
+import styles from "./styles.module.scss";
 
-export default function PokemonDetailPage() {
-  const [searchParams, setSearchParams] = useSearchParams();
+export const PokemonDetailPage = () => {
+  const searchParams = useSearchParams()[0];
   const pokemonId = searchParams.get("id");
-  const { data: pokemonDataArr } = useAppSelector((state) => state.pokemonData);
-  const pokemon = pokemonDataArr.find((pkm) => pkm.id === pokemonId);
+  const { data: pokemonDataArr, searchedData } = useAppSelector(
+    (state) => state.pokemonData
+  );
+  let pokemon =
+    pokemonDataArr.find((pkm) => pkm.id === pokemonId) || searchedData;
 
   return (
     <>
       <Header />
       <div className={styles.container}>
         {!pokemon ? (
-          <h1 className={styles.notFoundText}>Sorry! Pokemon not Found!</h1>
+          <h1 className={styles.notFoundText}>Sorry! Pokémon not Found!</h1>
         ) : (
           <>
             <PokemonDetailCard
@@ -28,31 +30,10 @@ export default function PokemonDetailPage() {
               height={pokemon.height}
               types={pokemon.types}
             />
-            <div className={styles.evolutionContent}>
-              <h2>Evolution</h2>
-              <div>
-                <img
-                  className={styles.smallImg}
-                  src={PokemonImg}
-                  alt="Pokemon Small Image"
-                />
-                <FiArrowRight />
-                <img
-                  className={styles.smallerImg}
-                  src={PokemonImg}
-                  alt="Pokemon Smaller Image"
-                />
-                <FiArrowRight />
-                <img
-                  className={styles.smallestImg}
-                  src={PokemonImg}
-                  alt="Pokemon Smallest Image"
-                />
-              </div>
-            </div>
+            <EvolutionPokemon />
           </>
         )}
       </div>
     </>
   );
-}
+};

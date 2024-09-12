@@ -1,11 +1,12 @@
 import { PokemonListCardProps } from "../../interfaces/PokemonCard.interface";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import styles from "./style.module.scss";
-import { CardBtn } from "../CardBtn";
+import { CardButton } from "../CardButton";
 import { setHasFetched } from "../../store/slice/pokemon.slice";
 import { useAppDispatch } from "../../hooks/store.hook";
+import { FC } from "react";
 
-export const PokemonListCard: React.FC<PokemonListCardProps> = ({
+export const PokemonListCard: FC<PokemonListCardProps> = ({
   id,
   name,
   number,
@@ -28,7 +29,7 @@ export const PokemonListCard: React.FC<PokemonListCardProps> = ({
       <header>
         <div>
           {types.map((type, idx) => (
-            <CardBtn
+            <CardButton
               key={idx}
               title={type}
               xtraStyle={idx == 1 ? styles.btnPosition : ""}
@@ -45,7 +46,7 @@ export const PokemonListCard: React.FC<PokemonListCardProps> = ({
             and grows with the pokemon. `}
             <b>{`Classification: ${classification}`}</b>
           </p>
-          <CardBtn
+          <CardButton
             title="Know more"
             xtraStyle={styles.btnKnowMore}
             onClick={() => navigateToDetailPage(id)}

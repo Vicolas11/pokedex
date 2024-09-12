@@ -1,9 +1,9 @@
 import { PokemonListProps } from "../../interfaces/PokemonListProp.interface";
 import { PokemonListCard } from "../PokemonListCard";
 import styles from "./style.module.scss";
-import React from "react";
+import { FC } from "react";
 
-export const PokemonList: React.FC<PokemonListProps> = ({ pokemonData }) => {
+export const PokemonList: FC<PokemonListProps> = ({ pokemonData }) => {
   return (
     <div className={styles.pokemonList}>
       {pokemonData.map((pokemon, idx) => (

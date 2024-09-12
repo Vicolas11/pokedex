@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 html {
-  @apply relative bg-bgColor overflow-x-hidden min-h-[100vh];
-  @apply bg-cover bg-no-repeat bg-center bg-custom_xs md:bg-custom_sm lg:bg-custom_lg;
+  @apply relative bg-bgColor overflow-x-hidden h-full w-full;
+  @apply bg-cover bg-no-repeat bg-custom_xs md:bg-custom_sm lg:bg-custom_lg;
 
   body {
     @apply max-w-[1280px] w-[90%] mx-auto overflow-x-hidden;

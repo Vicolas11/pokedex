@@ -6,24 +6,27 @@ import {
 
 const initialState: DataTypeArray = {
   data: [],
-  filteredData: [],
+  searchedData: null,
   searchTerm: "",
   hasFetched: true,
 };
 
-const userDataSlice = createSlice({
+const pokemonDataSlice = createSlice({
   name: "PokemonData",
   initialState,
   reducers: {
     setPokemonData: (state, { payload }: { payload: IPokemonData[] }) => {
       state.data = payload;
     },
-    setPokemonSearchData: (state, { payload }: { payload: IPokemonData[] }) => {
-      state.filteredData = payload;
+    setPokemonSearchData: (
+      state,
+      { payload }: { payload: IPokemonData | null }
+    ) => {
+      state.searchedData = payload;
     },
     resetPokemonData: (state) => {
       state.data = [];
-      state.filteredData = [];
+      state.searchedData = null;
       state.searchTerm = "";
       state.hasFetched = true;
     },
@@ -41,6 +44,6 @@ export const {
   setPokemonSearchData,
   setHasFetched,
   setSearchTerm,
-} = userDataSlice.actions;
+} = pokemonDataSlice.actions;
 
-export default userDataSlice.reducer;
+export default pokemonDataSlice.reducer;

@@ -1,28 +1,30 @@
 import { PokemonComparisonCardProps } from "../../interfaces/PokemonComparisonCard.interface";
-import PokemonDetailInfo from "../PokemonDetailInfo";
-import { PokemonImg } from "../../assets";
+import { PokemonDetailInfo } from "../PokemonDetailInfo";
 import styles from "./styles.module.scss";
+import { FC } from "react";
 
-export default function PokemonComparisonCard({
-  pokemonName,
-  pokemonNumber,
-}: PokemonComparisonCardProps) {
+export const PokemonComparisonCard: FC<PokemonComparisonCardProps> = ({
+  pokemon,
+}) => {
   return (
     <div className={styles.pokemonComparisonCard}>
       <div className={styles.pokemonComparisonImgContainer}>
         <img
           className={styles.pokemonComparisonImg}
-          src={PokemonImg}
+          src={pokemon.image}
           alt="Pokemon Image"
         />
       </div>
       <div className={styles.detailInfo}>
         <PokemonDetailInfo
-          pokemonName={pokemonName}
-          pokemonNumber={pokemonNumber}
+          pokemonName={pokemon.name}
+          pokemonNumber={pokemon.number}
+          weight={pokemon.weight}
+          height={pokemon.height}
+          types={pokemon.types}
           isDetailPage
         />
       </div>
     </div>
   );
-}
+};

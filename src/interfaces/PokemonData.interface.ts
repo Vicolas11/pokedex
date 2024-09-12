@@ -22,7 +22,7 @@ export interface IPokemonData {
 
 export type DataTypeArray = {
   data: Array<IPokemonData>;
-  filteredData: Array<IPokemonData>;
+  searchedData: IPokemonData | null;
   searchTerm: string;
   hasFetched: boolean;
 };
