@@ -1,0 +1,16 @@
+.pokemonComparisonCard {
+  @apply flex flex-col justify-center items-center px-4 py-16 mt-8 gap-y-4 my-10 rounded-[15px] bg-white;
+  box-shadow: 1px 2px 20px rgba($color: #000000, $alpha: 0.4);
+
+  .pokemonComparisonImgContainer {
+    @apply text-center;
+
+    .pokemonComparisonImg {
+      @apply h-40 ml-5;
+    }
+  }
+
+  .detailInfoContainer {
+    @apply w-[90%] mx-auto;
+  }
+}

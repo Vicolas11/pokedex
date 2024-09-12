@@ -11,7 +11,7 @@ export const router = createBrowserRouter([
     element: <PokemonDetailPage />,
   },
   {
-    path: "/compensation",
+    path: "/comparison",
     element: <PokemonComparisonPage />,
   },
 ]);

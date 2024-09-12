@@ -1,37 +1,20 @@
-import PokemonDetailCard from "../../components/PokemonDetailCard";
+import PokemonComparisonCard from "../../components/PokemonComparisonCard";
 import { Header } from "../../components/Header";
-import { FiArrowRight } from "react-icons/fi";
+import { CircleVersusImg } from "../../assets";
 import styles from "./styles.module.scss";
-import { PokemonImg } from "../../assets";
 
 export default function PokemonComparisonPage() {
   return (
     <>
       <Header />
       <div className={styles.container}>
-        <PokemonDetailCard />
-        <div className={styles.evolutionContent}>
-          <h2>Evolution</h2>
-          <div>
-            <img
-              className={styles.smallImg}
-              src={PokemonImg}
-              alt="Pokemon Small Image"
-            />
-            <FiArrowRight />
-            <img
-              className={styles.smallerImg}
-              src={PokemonImg}
-              alt="Pokemon Smaller Image"
-            />
-            <FiArrowRight />
-            <img
-              className={styles.smallestImg}
-              src={PokemonImg}
-              alt="Pokemon Smallest Image"
-            />
-          </div>
-        </div>
+        <PokemonComparisonCard pokemonName="Bulbasaur" pokemonNumber="001" />
+        <PokemonComparisonCard pokemonName="Jugglypuff" pokemonNumber="039" />
+        <img
+          className={styles.circleVersusImg}
+          src={CircleVersusImg}
+          alt="Circle Versus Image"
+        />
       </div>
     </>
   );
