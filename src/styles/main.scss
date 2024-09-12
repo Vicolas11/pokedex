@@ -3,29 +3,8 @@
 @tailwind utilities;
 
 html {
-  @apply relative bg-bgColor overflow-x-hidden;
-
-  img[alt="CircleBgImg"] {
-    @apply absolute w-48 md:w-80 -z-10 opacity-95;
-  }
-
-  #greyCircleBgImg1 {
-    @apply left-[-25%] top-[-3%];
-    @apply md:left-[-15%] md:top-[-10%];
-    @apply lg:left-[-5.5%] lg:top-[-5%];
-  }
-
-  #greyCircleBgImg2 {
-    @apply top-[-10%] right-[10%];
-    @apply md:top-[-25%] md:right-[-5%];
-    @apply lg:top-[-25.5%] lg:right-[20%];
-  }
-
-  #greyCircleBgImg3 {
-    @apply top-[20%] right-[-30%];
-    @apply md:top-[20%] md:right-[-15%];
-    @apply lg:top-[20%] lg:right-[-10%];
-  }
+  @apply relative bg-bgColor overflow-x-hidden min-h-[100vh];
+  @apply bg-cover bg-no-repeat bg-center bg-custom_xs md:bg-custom_sm lg:bg-custom_lg;
 
   body {
     @apply max-w-[1280px] w-[90%] mx-auto overflow-x-hidden;
