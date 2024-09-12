@@ -1,0 +1,92 @@
+.pokemonDetailInfo {
+  @apply flex-1 w-full px-16;
+
+  .pokemonDetailNum {
+    @apply font-bold;
+  }
+
+  .pokemonDetailName {
+    @apply flex gap-x-3 items-center mb-1;
+
+    h2 {
+      @apply font-bold text-3xl;
+    }
+
+    svg {
+      @apply text-xl mt-1;
+    }
+  }
+
+  .btnWrapper {
+    @apply flex gap-x-2 items-center;
+
+    .btnPosition {
+      @apply hover:bg-[#5092B7] disabled:hover:bg-bgColor;
+    }
+  }
+
+  .pokemonDetailDesc {
+    @apply text-sm my-4;
+  }
+
+  .heightWeight {
+    @apply flex justify-between gap-x-4;
+
+    div {
+      @apply flex justify-between bg-bgColor w-full px-2 py-1 rounded-[8px];
+
+      h3 {
+        @apply font-bold;
+      }
+    }
+  }
+
+  .headerText {
+    @apply font-bold mt-4 mb-1;
+  }
+
+  .stats {
+    @apply grid grid-cols-2 gap-x-4 gap-y-2;
+
+    .statsData {
+      @apply flex justify-between px-2 py-2 rounded-[8px];
+
+      h3 {
+        @apply font-bold;
+      }
+    }
+
+    .statsData:nth-child(1) {
+      @apply bg-[#DF2140];
+    }
+
+    .statsData:nth-child(2) {
+      @apply bg-[#FF994D];
+    }
+
+    .statsData:nth-child(3) {
+      @apply bg-[#EECD3D];
+    }
+
+    .statsData:nth-child(4) {
+      @apply bg-[#85DDFF];
+    }
+
+    .statsData:nth-child(5) {
+      @apply bg-[#96DA83];
+    }
+
+    .statsData:nth-child(6) {
+      @apply bg-[#FB94A8];
+    }
+  }
+
+  .pokemonAbilities {
+    @apply flex justify-between gap-x-4 mt-4;
+
+    p {
+      @apply flex justify-between bg-bgColor w-full;
+      @apply px-2 py-2 rounded-[8px] font-bold text-sm;
+    }
+  }
+}

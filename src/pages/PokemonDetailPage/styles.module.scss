@@ -1,0 +1,31 @@
+.container {
+  @apply w-[70%] mx-auto;
+
+  .evolutionContent {
+    @apply flex mx-auto my-10 px-6;
+
+    h2 {
+      @apply font-bold text-2xl;
+    }
+
+    div {
+      @apply flex gap-x-16 px-6 items-center mt-12;
+
+      svg {
+        @apply text-3xl;
+      }
+
+      .smallImg {
+        @apply h-20;
+      }
+
+      .smallerImg {
+        @apply h-24;
+      }
+
+      .smallestImg {
+        @apply h-28;
+      }
+    }
+  }
+}

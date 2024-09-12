@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply relative bg-bgColor;
+
+  .greyCircleBgImg_1 {
+    @apply absolute w-52 md:w-80 translate-x-[-8%] translate-y-[-10%];
+  }
+
+  .greyCircleBgImg_2 {
+    @apply block absolute w-52 md:w-80 translate-x-1/2 translate-y-[-55%];
+  }
+
+  .greyCircleBgImg_3 {
+    @apply absolute w-52 md:w-80 translate-x-[100%] translate-y-[50%];
+  }
+
+  body {
+    @apply max-w-[1280px] w-[90%] mx-auto;
+  }
+}

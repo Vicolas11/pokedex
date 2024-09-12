@@ -1,0 +1,46 @@
+.pokemonCard {
+  @apply bg-white rounded-[15px] p-3 text-center my-2;
+  @apply hover:scale-[1.05];
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  header {
+    @apply flex justify-between items-center;
+
+    div {
+      @apply flex gap-x-3 items-center;
+
+      .btnPosition {
+        @apply hover:bg-[#5092B7];
+      }
+    }
+
+    .pokemonNum {
+      @apply font-bold;
+    }
+  }
+
+  .pokemonBody {
+    @apply flex justify-between gap-x-4 items-end;
+
+    .pokemonInfo {
+      @apply flex-col text-left;
+
+      h2 {
+        @apply text-gray-800 font-bold mt-2 text-xl;
+      }
+
+      p {
+        @apply mt-1 mb-3 text-xs;
+      }
+
+      .btnKnowMore {
+        @apply hover:bg-[#F0F1E5];
+      }
+    }
+
+    img {
+      @apply h-24;
+    }
+  }
+}

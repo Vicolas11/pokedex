@@ -1,0 +1,15 @@
+.header {
+  @apply flex justify-between items-center mt-10;
+
+  .logo {
+    @apply w-36 cursor-pointer;
+
+    img {
+      @apply w-full h-full;
+    }
+  }
+
+  .menu {
+    @apply cursor-pointer text-lg;
+  }
+}
