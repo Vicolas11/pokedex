@@ -11,9 +11,9 @@ export interface IPokemonData {
     maximum: string;
   };
   classification: string;
-  types: [string];
-  resistant: [string];
-  weaknesses: [string];
+  types: string[];
+  resistant: string[];
+  weaknesses: string[];
   fleeRate: number;
   maxCP: number;
   maxHP: number;

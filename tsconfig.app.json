@@ -13,6 +13,12 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    "esModuleInterop": true,
+
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["./*"]
+    },
 
     /* Linting */
     "strict": true,
@@ -20,5 +26,12 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*.ts",
+    "./jest.setup.ts",
+    "src/**/*.tsx",
+    "__tests__/**/*.ts",
+    "__tests__/**/*.tsx",
+  ],
+  "exclude": ["node_modules"]
 }
