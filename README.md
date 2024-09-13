@@ -1,4 +1,4 @@
-### Pokémon App
+# Pokémon App
 ## Overview
 The Pokémon App is a React application that allows users to search for Pokémon, view detailed information about them, and compare different Pokémon. It includes a variety of features such as error handling, dynamic data fetching, and responsive design.
 
@@ -9,7 +9,7 @@ Pokémon Details: View detailed information about a specific Pokémon.
 Pokémon List: Display a list of Pokémon with search and error handling functionalities.
 
 ## Technologies Used
-React 
+- React 
 - TypeScript + Vite
 - SCSS
 - React Router DOM
@@ -18,52 +18,51 @@ React
 - Jest (for testing)
 
 ## Components
-# ErrorPage
+### ErrorPage
 A component that handles and displays error messages. It updates the document title based on the error status and provides a button to navigate back to the homepage.
 
-# PokemonComparisonPage
+### PokemonComparisonPage
 Displays a comparison between two Pokémon. Fetches random Pokémon data and shows a comparison card for each Pokémon.
 
-# PokemonDetailPage
+### PokemonDetailPage
 Shows detailed information about a specific Pokémon, including its image, weight, height, and types.
 
-# PokemonListPage
+### PokemonListPage
 Displays a list of Pokémon with search functionality. Handles loading states, errors, and provides a way to navigate back to previous search results.
 
-# Usage 
+## Usage 
 
-1. Installation
+**1. Installation**
 
 Clone the repository and install the dependencies:
 
-`bash 
+` 
 git clone <repository-url>
 cd <repository-directory>
 npm install
 `
 
-2. Running the App
+**2. Running the App**
 
 To start the development server, run:
 
-`bash
-npm run dev
+`npm run dev
 `
 
 Open **http://localhost:5173** in your browser to view the app.
 
-3. Testing
+**3. Testing**
 
 To run the tests, use:
 
-`bash npm test`
+`npm test`
 
-# Directory Structure
-- src/: Contains all source code files.
-- components/: Reusable UI components.
-- hooks/: Custom React hooks.
-- pages/: Page components for different routes.
-- graphql/: GraphQL queries and mutations.
-- store/: Redux store and slices.
-- utils/: Utility functions.
-- assets/: Static assets like images and logos.
+## Directory Structure
+- `src/:` Contains all source code files.
+- `components/:` Reusable UI components.
+- `hooks/:` Custom React hooks.
+- `pages/:` Page components for different routes.
+- `graphql/:` GraphQL queries and mutations.
+- `store/:` Redux store and slices.
+- `utils/:` Utility functions.
+- `assets/:` Static assets like images and logos.
