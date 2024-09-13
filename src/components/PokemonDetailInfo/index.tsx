@@ -70,7 +70,7 @@ export const PokemonDetailInfo = ({
       </div>
 
       {pokemonId && showBtn && (
-        <div className={styles.btnWrapper}>
+        <div className={styles.btnCompareWrapper}>
           <CardButton
             title={"Compare with other Pokémon"}
             xtraStyle={styles.btnCompareSm}
