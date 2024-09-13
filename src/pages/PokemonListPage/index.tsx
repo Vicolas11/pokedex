@@ -51,7 +51,7 @@ export const PokemonListPage = () => {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             query: isSearch ? fetchSinglePokemon : fetchedPokemons,
-            variables: isSearch ? { name: searchTerm } : { first: 9 },
+            variables: isSearch ? { name: searchTerm } : { first: 20 },
           }),
         });
 
