@@ -11,4 +11,5 @@ export interface PokemonDetailInfoProps {
     maximum: string;
   };
   types: string[];
+  showBtn?: boolean;
 }

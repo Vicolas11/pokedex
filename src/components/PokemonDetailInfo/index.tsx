@@ -1,4 +1,5 @@
 import { PokemonDetailInfoProps } from "../../interfaces/PokemonDetailInfo.interface";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { IoVolumeHighOutline } from "react-icons/io5";
 import { statsData } from "../../data/local.data";
 import styles from "./styles.module.scss";
@@ -11,7 +12,12 @@ export const PokemonDetailInfo = ({
   weight,
   height,
   types,
+  showBtn = false
 }: PokemonDetailInfoProps) => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const pokemonId = searchParams.get("id");
+  const navigate = useNavigate();
+
   return (
     <div className={styles.pokemonDetailInfo}>
       <p className={styles.pokemonDetailNum}>#{pokemonNumber}</p>
@@ -63,14 +69,18 @@ export const PokemonDetailInfo = ({
         <p>Chlorophyll</p>
       </div>
 
-      <CardButton
-        title={"Compare with other Pokémon"}
-        xtraStyle={styles.btnCompareSm}
-        onClick={() => {
-          navigate("/comparison");
-          setSearchParams({ id: pokemonId });
-         }}
-      />
+      {pokemonId && showBtn && (
+        <div className={styles.btnWrapper}>
+          <CardButton
+            title={"Compare with other Pokémon"}
+            xtraStyle={styles.btnCompareSm}
+            onClick={() => {
+              navigate("/comparison");
+              setSearchParams({ id: pokemonId });
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };

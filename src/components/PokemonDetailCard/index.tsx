@@ -26,6 +26,7 @@ export const PokemonDetailCard: FC<PokemonDetailCardProps> = ({
           alt="Pokemon Image"
         />
       </div>
+
       <PokemonDetailInfo
         pokemonName={name}
         pokemonNumber={number}
@@ -33,6 +34,7 @@ export const PokemonDetailCard: FC<PokemonDetailCardProps> = ({
         height={height}
         weight={weight}
         isDetailPage
+        showBtn
       />
 
       {pokemonId && (
