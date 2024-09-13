@@ -62,6 +62,15 @@ export const PokemonDetailInfo = ({
         <p>Overgrow</p>
         <p>Chlorophyll</p>
       </div>
+
+      <CardButton
+        title={"Compare with other Pokémon"}
+        xtraStyle={styles.btnCompareSm}
+        onClick={() => {
+          navigate("/comparison");
+          setSearchParams({ id: pokemonId });
+         }}
+      />
     </div>
   );
 };
