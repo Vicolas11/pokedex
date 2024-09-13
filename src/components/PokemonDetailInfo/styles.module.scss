@@ -89,4 +89,8 @@
       @apply px-2 py-2 rounded-[8px] font-bold text-sm;
     }
   }
+
+  .btnCompareSm {
+    @apply mt-5 md:hidden;
+  }
 }
