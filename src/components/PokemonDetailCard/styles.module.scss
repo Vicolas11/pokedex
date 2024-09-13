@@ -12,7 +12,7 @@
   }
 
   .btnCompare {
-    @apply absolute bottom-2 left-3 scale-100 transition-all hover:opacity-95 hover:scale-105;
+    @apply hidden md:block absolute bottom-2 left-3 scale-100 transition-all hover:opacity-95 hover:scale-105;
     @apply duration-200 py-2;
   }
 }
