@@ -28,7 +28,7 @@ export const PokemonListCard: FC<PokemonListCardProps> = ({
     <div className={styles.pokemonCard}>
       <header>
         <div>
-          {types.map((type, idx) => (
+          {types && types.map((type, idx) => (
             <CardButton
               key={idx}
               title={type}

@@ -1,7 +1,7 @@
 import { fetchSinglePokemon, fetchedPokemons } from "../../graphql/query";
 import { useAppDispatch, useAppSelector } from "../../hooks/store.hook";
-import { PokemonList } from "../../components/PokemonList";
 import { constants } from "../../config/constants.config";
+import { PokemonList } from "../../components/PokemonList";
 import { SearchBar } from "../../components/SearchBar";
 import { Loader } from "../../components/Loader";
 import { Header } from "../../components/Header";

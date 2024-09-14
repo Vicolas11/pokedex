@@ -1,5 +1,9 @@
-import { render, screen } from "@testing-library/react";
 import { PokemonList } from "../src/components/PokemonList";
+import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "../src/store/store";
+import "@testing-library/jest-dom";
 
 describe("PokemonList", () => {
   const mockPokemonData = [
@@ -69,7 +73,13 @@ describe("PokemonList", () => {
   ];
 
   test("renders list of Pokémon cards", () => {
-    render(<PokemonList pokemonData={mockPokemonData} />);
+    render(
+      <Provider store={store}>
+        <MemoryRouter>
+          <PokemonList pokemonData={mockPokemonData} />
+        </MemoryRouter>
+      </Provider>
+    );
 
     expect(screen.getByText(/Bulbasaur/i)).toBeInTheDocument();
     expect(screen.getByText(/Ivysaur/i)).toBeInTheDocument();
